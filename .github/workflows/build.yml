@@ -33,3 +33,5 @@ jobs:
         run: cargo test
         env:
           RUST_BACKTRACE: 1
+          PERNOSCO_ENABLE: 1
+          PERNOSCO_RETRIES: 1000000
