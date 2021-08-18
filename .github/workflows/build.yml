@@ -27,7 +27,13 @@ jobs:
           override: true
 
       - name: cargo build (debug; default features)
-        run: cargo build
+        run: |
+          echo HOME=$HOME
+          echo CARGO_HOME=$CARGO_HOME
+          ls -al /etc/skel
+          sudo ls -al /root
+          sudo ls -al $HOME
+          cargo build
 
       - name: cargo test (debug; default features)
         run: cargo test
