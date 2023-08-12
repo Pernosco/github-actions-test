@@ -21,11 +21,10 @@ jobs:
           persist-credentials: false
 
       - name: Install ${{ matrix.rust }} toolchain
-        uses: actions-rs/toolchain@v1
+        uses: Pernosco/rust-toolchain@master
         with:
           toolchain: ${{ matrix.rust }}
           override: true
-          components: rustfmt
 
       - name: cargo build (debug; default features)
         run: cargo build
