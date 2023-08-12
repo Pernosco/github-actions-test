@@ -25,6 +25,7 @@ jobs:
         with:
           toolchain: ${{ matrix.rust }}
           override: true
+          components: rustfmt
 
       - name: cargo build (debug; default features)
         run: cargo build
